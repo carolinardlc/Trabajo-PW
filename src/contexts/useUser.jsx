@@ -25,8 +25,10 @@ const AuthContext = createContext({});
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(undefined);
 
-  const login = async () => {
+  const login = async ({ usuario, password }) => {
     const users = await getUsers();
+
+	  console.log("users", users)
 
     for (const usr of users) {
       if (usr.usuario === usuario && usr.password === password) {
