@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useUser } from "../../contexts/useUser";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const { user } = useUser();
@@ -12,7 +14,7 @@ const ProductDetailsPage = () => {
       return;
     }
 
-    fetch("http://localhost:8080/carritos/items", {
+    fetch(`${SERVER_URL}/carritos/items`, {
       method: "POST",
       body: JSON.stringify({
         carrito_id: carritoId,
@@ -29,7 +31,7 @@ const ProductDetailsPage = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8080/productos/${id}`)
+    fetch(`${SERVER_URL}/productos/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);

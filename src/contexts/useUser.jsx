@@ -1,13 +1,15 @@
 import { createContext, useContext, useState } from "react";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const getUsers = async () => {
-  return await fetch("http://localhost:8080/usuarios").then((res) =>
+  return await fetch(`${SERVER_URL}/usuarios`).then((res) =>
     res.json(),
   );
 };
 
 const createUser = ({ usuario, password, rol }) => {
-  return fetch("http://localhost:8080/usuarios", {
+  return fetch(`${SERVER_URL}/usuarios`, {
     method: "POST",
     body: JSON.stringify({ usuario, password, rol }),
     mode: "cors",

@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 import "./principal.css";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 export const Principal = () => {
   const [ordenes, setOrdenes] = useState([]);
   const [usuarios, setUsuarios] = useState([]);
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/ordenes")
+    fetch(`${SERVER_URL}/ordenes`)
       .then((res) => res.json())
       .then((data) => setOrdenes(data));
-    fetch("http://localhost:8080/usuarios")
+    fetch(`${SERVER_URL}/usuarios`)
       .then((res) => res.json())
       .then((data) => setUsuarios(data));
-    fetch("http://localhost:8080/productos")
+    fetch(`${SERVER_URL}/productos`)
       .then((res) => res.json())
       .then((data) => setProductos(data));
   }, []);

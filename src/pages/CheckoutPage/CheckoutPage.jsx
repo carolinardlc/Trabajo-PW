@@ -8,6 +8,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import "./checkout-page.css";
 import { useUser } from "../../contexts/useUser";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const createOrder = ({
   usuario_id,
   tipo_envio,
@@ -15,7 +17,7 @@ const createOrder = ({
   impuestos,
   total,
 }) => {
-  return fetch("http://localhost:8080/ordenes/", {
+  return fetch(`${SERVER_URL}/ordenes/`, {
     method: "POST",
     body: JSON.stringify({
       usuario_id,
@@ -33,14 +35,14 @@ const createOrder = ({
 };
 
 const removeFromCart = ({ carrito_id, producto_id }) => {
-  fetch(`http://localhost:8080/carritos/${carrito_id}/items/${producto_id}`, {
+  fetch(`${SERVER_URL}/carritos/${carrito_id}/items/${producto_id}`, {
     method: "DELETE",
     mode: "cors",
   });
 };
 
 const updateDireccion = (direccionId, direccion) => {
-  return fetch(`http://localhost:8080/direcciones/${direccionId}`, {
+  return fetch(`${SERVER_URL}/direcciones/${direccionId}`, {
     method: "PUT",
     body: JSON.stringify(direccion),
     mode: "cors",
@@ -73,10 +75,10 @@ export function CheckoutPage() {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:8080/carritos/${user.carrito_id}`)
+      fetch(`${SERVER_URL}/carritos/${user.carrito_id}`)
         .then((res) => res.json())
         .then((data) => setCart(data));
-      fetch(`http://localhost:8080/direcciones/${user.direccion_id}`)
+      fetch(`${SERVER_URL}/direcciones/${user.direccion_id}`)
         .then((res) => res.json())
         .then((data) => setDireccion(data));
     }

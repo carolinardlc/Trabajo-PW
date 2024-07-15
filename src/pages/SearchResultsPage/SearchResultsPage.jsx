@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 
 import "./SearchResultsPage.css";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
 };
@@ -35,10 +37,10 @@ const SearchResultsPage = () => {
     );
 
   useEffect(() => {
-    fetch("http://localhost:8080/productos")
+    fetch(`${SERVER_URL}/productos`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
-  });
+  }, []);
 
   return (
     <div className="search-results-container">

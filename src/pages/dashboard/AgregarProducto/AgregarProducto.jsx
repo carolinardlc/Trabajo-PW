@@ -5,8 +5,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const createProduct = (values) => {
-  return fetch("http://localhost:8080/productos", {
+  return fetch(`${SERVER_URL}/productos`, {
     method: "POST",
     body: JSON.stringify(values),
     mode: "cors",

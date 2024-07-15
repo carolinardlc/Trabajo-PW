@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import "./table.css";
 import { useEffect, useState } from "react";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 export const Table = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/productos")
+    fetch(`${SERVER_URL}/productos`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

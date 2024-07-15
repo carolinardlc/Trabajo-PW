@@ -6,6 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 export function ProductPage() {
   const location = useLocation();
   const productId = useMemo(
@@ -21,7 +23,7 @@ export function ProductPage() {
   });
 
   const onSubmit = form.handleSubmit((values) => {
-    fetch(`http://localhost:8080/productos/${productId}`, {
+    fetch(`${SERVER_URL}/productos/${productId}`, {
       method: "PUT",
       body: values,
     });
@@ -29,7 +31,7 @@ export function ProductPage() {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:8080/productos/${productId}`)
+    fetch(`${SERVER_URL}/productos/${productId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);

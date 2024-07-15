@@ -2,15 +2,17 @@ import "./Main.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL; 
+
 const Main = () => {
   const [series, setSeries] = useState([]);
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/series")
+    fetch(`${SERVER_URL}/series`)
       .then((res) => res.json())
       .then((data) => setSeries(data));
-    fetch("http://localhost:8080/productos")
+    fetch(`${SERVER_URL}/productos`)
       .then((res) => res.json())
       .then((data) => setProductos(data));
   }, []);

@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Product } from "../../components/Product";
 import { useEffect, useState } from "react";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 export function OrderPage() {
   const [products, setProducts] = useState([]);
 
@@ -10,7 +12,7 @@ export function OrderPage() {
     .slice(0, 3);
 
   useEffect(() => {
-    fetch("http://localhost:8080/productos")
+    fetch(`${SERVER_URL}/productos`)
       .then((res) => res.json())
       .then((data) => setProducts(data));
   });

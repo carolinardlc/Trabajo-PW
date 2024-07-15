@@ -6,13 +6,15 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useUser } from "../../contexts/useUser";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 export function CartPage() {
   const { user } = useUser();
   const [cart, setCart] = useState(undefined);
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:8080/carritos/${user.carrito_id}`)
+      fetch(`${SERVER_URL}/carritos/${user.carrito_id}`)
         .then((res) => res.json())
         .then((data) => setCart(data));
     }

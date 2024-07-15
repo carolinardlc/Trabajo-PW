@@ -1,13 +1,15 @@
 import { useState } from "react";
 
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const removeFromCart = ({ carrito_id, producto_id }) => {
-  fetch(`http://localhost:8080/carritos/${carrito_id}/items/${producto_id}`, {
+  fetch(`${SERVER_URL}/carritos/${carrito_id}/items/${producto_id}`, {
     method: "DELETE",
   });
 };
 
 const updateProductItem = ({ producto_id, estado, cantidad }) => {
-  fetch(`http://localhost:8080/carritos/items/${producto_id}`, {
+  fetch(`${SERVER_URL}/carritos/items/${producto_id}`, {
     method: "PUT",
     body: JSON.stringify({ estado, cantidad }),
     mode: "cors",
