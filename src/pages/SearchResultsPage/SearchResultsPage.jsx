@@ -32,7 +32,7 @@ const SearchResultsPage = () => {
     .filter((producto) => producto.nombre.toLowerCase().includes(searchTerm))
     .sort((a, b) =>
       sortCriteria === "precio"
-        ? a.price - b.price
+        ? a.precio - b.precio
         : a.nombre.localeCompare(b.nombre),
     );
 
@@ -72,7 +72,7 @@ const SearchResultsPage = () => {
             <tr key={result.id}>
               <td>{result.id}</td>
               <td>{result.nombre}</td>
-              <td className="precio">${result.price.toLocaleString()}</td>
+              <td className="precio">${result.precio.toLocaleString()}</td>
             </tr>
           ))}
         </tbody>
