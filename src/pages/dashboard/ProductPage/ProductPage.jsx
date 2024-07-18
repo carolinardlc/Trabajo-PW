@@ -40,7 +40,7 @@ export function ProductPage() {
     if (product) {
       form.setValue("img", product.img);
       form.setValue("nombre", product.nombre);
-      form.setValue("price", String(product.price));
+      form.setValue("precio", String(product.precio));
     }
   }, [product]);
 
@@ -61,9 +61,9 @@ export function ProductPage() {
           <input
             type="number"
             placeholder="Precio"
-            {...form.register("price")}
+            {...form.register("precio")}
           />
-          <Error>{form.formState.errors.price}</Error>
+          <Error>{form.formState.errors.precio}</Error>
           <button type="submit">Submit</button>
         </form>
       </div>

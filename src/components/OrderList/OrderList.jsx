@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './OrderList.css'; 
 
-const OrderList = () => {
-  const orders = [
-    { id: 101, usuarioNombre: 'Juan', usuarioApellido: 'Perez', fecha: '2023-04-01',total: 100, correo: 'juan@example.com', estado: 'Entregado',direccion:'Lima...',metodo:'Aereo',pago:'codigo QR' },
-    { id: 102, usuarioNombre: 'Ana', usuarioApellido: 'Gomez', fecha: '2023-04-02',total: 100, correo: 'ana@example.com', estado: 'Por enviar',direccion:'Lima...',metodo:'Aereo',pago:'codigo QR' },
-    { id: 103, usuarioNombre: 'Luis', usuarioApellido: 'Martinez', fecha: '2023-04-03',total: 100, correo: 'luis@example.com', estado: 'Por enviar' ,direccion:'Lima...',metodo:'Prioritario',pago:'tarjeta'},
-    { id: 104, usuarioNombre: 'Carla', usuarioApellido: 'Lopez', fecha: '2023-04-04',total: 100, correo: 'carla@example.com', estado: 'Entregado',direccion:'Lima...',metodo:'Prioritario',pago:'tarjeta' },
-    
-  ];
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
+const OrderList = () => {
+  const [orders, setOrders] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const ordersPerPage = 2;
@@ -26,6 +21,12 @@ const OrderList = () => {
   const currentOrders = filteredOrders.slice(indexOfFirstOrder, indexOfLastOrder);
 
   const totalPages = Math.ceil(filteredOrders.length / ordersPerPage);
+
+  useEffect(() => {
+    fetch(`${SERVER_URL}/ordenes`)
+      .then((res) => res.json())
+      .then((data) => setOrders(data));
+  }, [])
 
   return (
     <div className="container">

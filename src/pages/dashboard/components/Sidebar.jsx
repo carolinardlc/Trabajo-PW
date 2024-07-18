@@ -32,10 +32,6 @@ export function Sidebar() {
           </li>
           <li>
             {/* TODO */}
-            <Link to="/dashboard/products-">Productos más vendidos</Link>
-          </li>
-          <li>
-            {/* TODO */}
             <Link to="/dashboard/series">Series</Link>
           </li>
         </ul>

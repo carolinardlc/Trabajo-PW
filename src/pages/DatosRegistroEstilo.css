@@ -1,156 +1,156 @@
-body{
-    background-color: rgb(234, 234, 234);
-    font-size: 13px;
-
-}
-
-h2{
-    font-size: 20px;
-    width: auto;
-    background-color: white;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.admi{
-    padding-left: 30px;
-}
-
-#medio3{
-        display: flex;
-        background-color: rgb(234, 234, 234);
-        margin-top: 20px;
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-bottom: 20px;
-        height: 500px;
-}
-
-.Registro{
-    background-color: white;  
-    height: 400px;
-    width: 250px;
-}
-
-.RegistroTodo{
-    background-color: white;
-    margin-left: 40px;
-    height: 500px;
-    width: 100%;
-    
-}
-.DR{
-    width: auto;
-    padding: 10px;
-    margin-top: 0;
-    margin-bottom: 45px;
-    background-color: gainsboro;
-}
-
-#btns{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    height: 70%;
-    width: 50%;
-    padding-top: 1rem;
-    background-color: gainsboro;
-    margin-left: 25%;
-}
-.btndr{
-    margin-top: 1.5rem;
-    background-color: white;
-    border-radius: 4px 4px 4px 4px;
-    border: rgb(53, 53, 53) 3px solid;
-    padding-right: 1rem;    
-    padding-Left: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    width: 300px;
-    height: 20px;
-    font-Size: 16px;
-}
-
-#actualizar{    
-    background-color: black;
-    margin-top: 1.5rem;
-    font-size: 15px;
-    color: white;
-    width: 250px;
-    height: 50px;
-    transition: background-color 0.3s ease; 
-}
-#actualizar:hover{
-    background-color:rgb(255, 255, 255); 
-    color: black;
-}
-
-
-
-
-
-
-
-
-.pie{
-    background-color: rgb(188, 188, 188);
-    width: auto;
-    height: 160px;
-    margin: 0;
-    display: flex;
-}
-
-
-
-.footer1{
-    padding-left: 35px;
-    width: 30%;
-    margin: auto;
-    padding-bottom: 20px;
-    
-    
-}
-.footer2{
-    width: 15%;
-    margin: auto;
-}
-.footer3{
-    width: 15%;
-    margin: auto;
-}
-.footer4{
-    width: 15%;
-    margin: auto;
-}
-.footer5{
-    width: 25%;
-    margin: auto;   
-}
-.logos{
-    width: 75%;
-    margin: auto;   
-    padding-left: 12%;
-    padding-bottom: 5%;
-}
-
-.til{
-    padding-left: 30px;
-    padding-top: 20px;
-    margin: 0;
-    padding-bottom: 10px;
-}
-.we{
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 0;
-}
-
-.wo{
-    margin-top: 0;
-    padding-bottom: 15px;
-}
-
-.tienda{
-    font-size: 25px;
-    margin-bottom: 0;
-}
+/* body{ */
+/*     background-color: rgb(234, 234, 234); */
+/*     font-size: 13px; */
+/**/
+/* } */
+/**/
+/* /* h2{ */ */
+/* /*     font-size: 20px; */ */
+/* /*     width: auto; */ */
+/* /*     background-color: white; */ */
+/* /*     padding-top: 15px; */ */
+/* /*     padding-bottom: 15px; */ */
+/* /* } */ */
+/* .admi{ */
+/*     padding-left: 30px; */
+/* } */
+/**/
+/* #medio3{ */
+/*         display: flex; */
+/*         background-color: rgb(234, 234, 234); */
+/*         margin-top: 20px; */
+/*         margin-left: 50px; */
+/*         margin-right: 50px; */
+/*         margin-bottom: 20px; */
+/*         height: 500px; */
+/* } */
+/**/
+/* .Registro{ */
+/*     background-color: white;   */
+/*     height: 400px; */
+/*     width: 250px; */
+/* } */
+/**/
+/* .RegistroTodo{ */
+/*     background-color: white; */
+/*     margin-left: 40px; */
+/*     height: 500px; */
+/*     width: 100%; */
+/*      */
+/* } */
+/* .DR{ */
+/*     width: auto; */
+/*     padding: 10px; */
+/*     margin-top: 0; */
+/*     margin-bottom: 45px; */
+/*     background-color: gainsboro; */
+/* } */
+/**/
+/* #btns{ */
+/*     display: flex; */
+/*     flex-direction: column; */
+/*     align-items: center; */
+/*     background-color: white; */
+/*     height: 70%; */
+/*     width: 50%; */
+/*     padding-top: 1rem; */
+/*     background-color: gainsboro; */
+/*     margin-left: 25%; */
+/* } */
+/* .btndr{ */
+/*     margin-top: 1.5rem; */
+/*     background-color: white; */
+/*     border-radius: 4px 4px 4px 4px; */
+/*     border: rgb(53, 53, 53) 3px solid; */
+/*     padding-right: 1rem;     */
+/*     padding-Left: 1rem; */
+/*     padding-top: 0.5rem; */
+/*     padding-bottom: 0.5rem; */
+/*     width: 300px; */
+/*     height: 20px; */
+/*     font-Size: 16px; */
+/* } */
+/**/
+/* #actualizar{     */
+/*     background-color: black; */
+/*     margin-top: 1.5rem; */
+/*     font-size: 15px; */
+/*     color: white; */
+/*     width: 250px; */
+/*     height: 50px; */
+/*     transition: background-color 0.3s ease;  */
+/* } */
+/* #actualizar:hover{ */
+/*     background-color:rgb(255, 255, 255);  */
+/*     color: black; */
+/* } */
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/* .pie{ */
+/*     background-color: rgb(188, 188, 188); */
+/*     width: auto; */
+/*     height: 160px; */
+/*     margin: 0; */
+/*     display: flex; */
+/* } */
+/**/
+/**/
+/**/
+/* .footer1{ */
+/*     padding-left: 35px; */
+/*     width: 30%; */
+/*     margin: auto; */
+/*     padding-bottom: 20px; */
+/*      */
+/*      */
+/* } */
+/* .footer2{ */
+/*     width: 15%; */
+/*     margin: auto; */
+/* } */
+/* .footer3{ */
+/*     width: 15%; */
+/*     margin: auto; */
+/* } */
+/* .footer4{ */
+/*     width: 15%; */
+/*     margin: auto; */
+/* } */
+/* .footer5{ */
+/*     width: 25%; */
+/*     margin: auto;    */
+/* } */
+/* .logos{ */
+/*     width: 75%; */
+/*     margin: auto;    */
+/*     padding-left: 12%; */
+/*     padding-bottom: 5%; */
+/* } */
+/**/
+/* .til{ */
+/*     padding-left: 30px; */
+/*     padding-top: 20px; */
+/*     margin: 0; */
+/*     padding-bottom: 10px; */
+/* } */
+/* .we{ */
+/*     margin: 0; */
+/*     padding-top: 5px; */
+/*     padding-bottom: 0; */
+/* } */
+/**/
+/* .wo{ */
+/*     margin-top: 0; */
+/*     padding-bottom: 15px; */
+/* } */
+/**/
+/* .tienda{ */
+/*     font-size: 25px; */
+/*     margin-bottom: 0; */
+/* } */

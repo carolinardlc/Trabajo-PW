@@ -1,240 +1,240 @@
-body{
-    background-color: rgb(234, 234, 234);
-    font-size: 13px;
-
-}
-
-h2{
-    font-size: 20px;
-    width: auto;
-    background-color: white;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.admi{
-    padding-left: 30px;
-}
-
-#medio2{
-        display: flex;
-        background-color: rgb(234, 234, 234);
-        margin-top: 20px;
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-bottom: 20px;
-}
-
-.Admin{
-    background-color: white;
-    height: 500px;
-    width: 250px;
-}
-
-.AgregarTodo{
-    background-color: rgb(234, 234, 234);
-    margin-left: 40px;
-    height: 400px;
-    width: 100%;
-}
-.Agregar{
-    width: auto;
-    padding: 10px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    background-color: gainsboro;
-}
-
-.AgregarDos{
-    display: flex;
-    
-}
-.Imagen_Agregar{
-    width: 40%;
-    height: 400px;
-    margin-right: 20px;
-    display:grid;
-    place-items: center;
-    
-}
-
-#Cuadro_Imagen{  
-    width: 400px;
-    height: 300px;
-    border-radius: 4px 4px 4px 4px;   
-}
-#Bt_agregar{
-    margin-bottom: 5px;        
-    width: 150px;
-    height: 30px;
-    border-radius: 4px 4px 4px 4px;   
-    transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */
-}
-#Bt_agregar:hover{
-    background-color:rgb(161, 255, 255); /* Color de fondo al pasar el cursor por encima */
-}
-
-#NombreSerie{
-    background-color: white;
-    box-sizing: border-box;
-    width: 100%;
-    height: 30px;
-    padding: 0;
-    margin-bottom: 2px;
-    padding-left: 10px;
-    border-radius: 4px 4px 4px 4px;
-}
-
-#DescripcionSerie{
-    background-color: white;
-    box-sizing: border-box;
-    width: 100%;
-    height: 60px;
-    padding: 0;
-    margin-bottom: 2px;
-    padding-left: 10px;
-    border-radius: 4px 4px 4px 4px;
-}
-
-.titulotercio{
-    margin-bottom: 2px;
-}
-
-#titulosimbolo{
-    margin-top: 8px;
-    margin-bottom: 2px;
-    display: flex;
-    height: 30px;
-    background-color: gainsboro;
-}
-
-#mas{
-    background-color: black;
-    font-size: 10px;
-    color: white;
-    width: 35px;
-    transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */
-    font-weight: bolder;
-}
-
-.titulotercio2{
-    width: 100%;    
-    margin: 0;  
-    padding-top: 8px;
-    padding-left: 10px;
-}
-
-.tabla{
-    height: 180px;
-    background-color: white;    
-}
-
-.columna{
-    background-color: white;
-}
-.item1{
-    padding: 10px;
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    font-weight: bold;
-    width: 50px;
-    text-align: left;
-}
-.item2{
-    padding: 10px;
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    font-weight: bold;
-    width: 550px;
-    text-align: left;
-}
-.item3{
-    padding: 10px;
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    font-weight: bold;
-    width: 100px;
-    text-align: left;
-}
-
-.espacioguardar{
-    display: flex; 
-    justify-content:end; 
-    padding: 15px; 
-}
-#guardar{
-    background-color: black;
-    font-size: 14px;
-    color: white;
-    width: 200px;
-    height: 35px;
-    transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */
-}
-#guardar:hover, #mas:hover{
-    background-color:rgb(255, 255, 255); /* Color de fondo al pasar el cursor por encima */
-    color: black;
-}
-
-
-
-
-
-
-.pie{
-    background-color: rgb(188, 188, 188);
-    width: auto;
-    height: 160px;
-    margin: 0;
-    display: flex;
-}
-
-
-
-.footer1{
-    padding-left: 35px;
-    width: 30%;
-    margin: auto;
-    padding-bottom: 20px;
-    
-    
-}
-.footer2{
-    width: 15%;
-    margin: auto;
-}
-.footer3{
-    width: 15%;
-    margin: auto;
-}
-.footer4{
-    width: 15%;
-    margin: auto;
-}
-.footer5{
-    width: 25%;
-    margin: auto;   
-}
-.logos{
-    width: 75%;
-    margin: auto;   
-    padding-left: 12%;
-    padding-bottom: 5%;
-}
-
-.til{
-    padding-left: 30px;
-    padding-top: 20px;
-    margin: 0;
-    padding-bottom: 10px;
-}
-.we{
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 0;
-}
-
-.wo{
-    margin-top: 0;
-    padding-bottom: 15px;
-}
-
-.tienda{
-    font-size: 25px;
-    margin-bottom: 0;
-}
+/* body{ */
+/*     background-color: rgb(234, 234, 234); */
+/*     font-size: 13px; */
+/**/
+/* } */
+/**/
+/* /* h2{ */ */
+/* /*     font-size: 20px; */ */
+/* /*     width: auto; */ */
+/* /*     background-color: white; */ */
+/* /*     padding-top: 15px; */ */
+/* /*     padding-bottom: 15px; */ */
+/* /* } */ */
+/* .admi{ */
+/*     padding-left: 30px; */
+/* } */
+/**/
+/* #medio2{ */
+/*         display: flex; */
+/*         background-color: rgb(234, 234, 234); */
+/*         margin-top: 20px; */
+/*         margin-left: 50px; */
+/*         margin-right: 50px; */
+/*         margin-bottom: 20px; */
+/* } */
+/**/
+/* .Admin{ */
+/*     background-color: white; */
+/*     height: 500px; */
+/*     width: 250px; */
+/* } */
+/**/
+/* .AgregarTodo{ */
+/*     background-color: rgb(234, 234, 234); */
+/*     margin-left: 40px; */
+/*     height: 400px; */
+/*     width: 100%; */
+/* } */
+/* .Agregar{ */
+/*     width: auto; */
+/*     padding: 10px; */
+/*     margin-top: 0; */
+/*     margin-bottom: 15px; */
+/*     background-color: gainsboro; */
+/* } */
+/**/
+/* .AgregarDos{ */
+/*     display: flex; */
+/*      */
+/* } */
+/* .Imagen_Agregar{ */
+/*     width: 40%; */
+/*     height: 400px; */
+/*     margin-right: 20px; */
+/*     display:grid; */
+/*     place-items: center; */
+/*      */
+/* } */
+/**/
+/* #Cuadro_Imagen{   */
+/*     width: 400px; */
+/*     height: 300px; */
+/*     border-radius: 4px 4px 4px 4px;    */
+/* } */
+/* #Bt_agregar{ */
+/*     margin-bottom: 5px;         */
+/*     width: 150px; */
+/*     height: 30px; */
+/*     border-radius: 4px 4px 4px 4px;    */
+/*     transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */ */
+/* } */
+/* #Bt_agregar:hover{ */
+/*     background-color:rgb(161, 255, 255); /* Color de fondo al pasar el cursor por encima */ */
+/* } */
+/**/
+/* #NombreSerie{ */
+/*     background-color: white; */
+/*     box-sizing: border-box; */
+/*     width: 100%; */
+/*     height: 30px; */
+/*     padding: 0; */
+/*     margin-bottom: 2px; */
+/*     padding-left: 10px; */
+/*     border-radius: 4px 4px 4px 4px; */
+/* } */
+/**/
+/* #DescripcionSerie{ */
+/*     background-color: white; */
+/*     box-sizing: border-box; */
+/*     width: 100%; */
+/*     height: 60px; */
+/*     padding: 0; */
+/*     margin-bottom: 2px; */
+/*     padding-left: 10px; */
+/*     border-radius: 4px 4px 4px 4px; */
+/* } */
+/**/
+/* .titulotercio{ */
+/*     margin-bottom: 2px; */
+/* } */
+/**/
+/* #titulosimbolo{ */
+/*     margin-top: 8px; */
+/*     margin-bottom: 2px; */
+/*     display: flex; */
+/*     height: 30px; */
+/*     background-color: gainsboro; */
+/* } */
+/**/
+/* #mas{ */
+/*     background-color: black; */
+/*     font-size: 10px; */
+/*     color: white; */
+/*     width: 35px; */
+/*     transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */ */
+/*     font-weight: bolder; */
+/* } */
+/**/
+/* .titulotercio2{ */
+/*     width: 100%;     */
+/*     margin: 0;   */
+/*     padding-top: 8px; */
+/*     padding-left: 10px; */
+/* } */
+/**/
+/* .tabla{ */
+/*     height: 180px; */
+/*     background-color: white;     */
+/* } */
+/**/
+/* .columna{ */
+/*     background-color: white; */
+/* } */
+/* .item1{ */
+/*     padding: 10px; */
+/*     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ */
+/*     font-weight: bold; */
+/*     width: 50px; */
+/*     text-align: left; */
+/* } */
+/* .item2{ */
+/*     padding: 10px; */
+/*     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ */
+/*     font-weight: bold; */
+/*     width: 550px; */
+/*     text-align: left; */
+/* } */
+/* .item3{ */
+/*     padding: 10px; */
+/*     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ */
+/*     font-weight: bold; */
+/*     width: 100px; */
+/*     text-align: left; */
+/* } */
+/**/
+/* .espacioguardar{ */
+/*     display: flex;  */
+/*     justify-content:end;  */
+/*     padding: 15px;  */
+/* } */
+/* #guardar{ */
+/*     background-color: black; */
+/*     font-size: 14px; */
+/*     color: white; */
+/*     width: 200px; */
+/*     height: 35px; */
+/*     transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */ */
+/* } */
+/* #guardar:hover, #mas:hover{ */
+/*     background-color:rgb(255, 255, 255); /* Color de fondo al pasar el cursor por encima */ */
+/*     color: black; */
+/* } */
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/* .pie{ */
+/*     background-color: rgb(188, 188, 188); */
+/*     width: auto; */
+/*     height: 160px; */
+/*     margin: 0; */
+/*     display: flex; */
+/* } */
+/**/
+/**/
+/**/
+/* .footer1{ */
+/*     padding-left: 35px; */
+/*     width: 30%; */
+/*     margin: auto; */
+/*     padding-bottom: 20px; */
+/*      */
+/*      */
+/* } */
+/* .footer2{ */
+/*     width: 15%; */
+/*     margin: auto; */
+/* } */
+/* .footer3{ */
+/*     width: 15%; */
+/*     margin: auto; */
+/* } */
+/* .footer4{ */
+/*     width: 15%; */
+/*     margin: auto; */
+/* } */
+/* .footer5{ */
+/*     width: 25%; */
+/*     margin: auto;    */
+/* } */
+/* .logos{ */
+/*     width: 75%; */
+/*     margin: auto;    */
+/*     padding-left: 12%; */
+/*     padding-bottom: 5%; */
+/* } */
+/**/
+/* .til{ */
+/*     padding-left: 30px; */
+/*     padding-top: 20px; */
+/*     margin: 0; */
+/*     padding-bottom: 10px; */
+/* } */
+/* .we{ */
+/*     margin: 0; */
+/*     padding-top: 5px; */
+/*     padding-bottom: 0; */
+/* } */
+/**/
+/* .wo{ */
+/*     margin-top: 0; */
+/*     padding-bottom: 15px; */
+/* } */
+/**/
+/* .tienda{ */
+/*     font-size: 25px; */
+/*     margin-bottom: 0; */
+/* } */

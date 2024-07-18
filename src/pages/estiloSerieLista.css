@@ -1,213 +1,213 @@
-body{
-    background-color: rgb(234, 234, 234);
-    font-size: 13px;
-
-}
-
-h2{
-    font-size: 20px;
-    width: auto;
-    background-color: white;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.admi{
-    padding-left: 30px;
-}
-
-#medio1{
-        display: flex;
-        background-color: rgb(234, 234, 234);
-        margin-top: 20px;
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-bottom: 20px;
-}
-
-.Admin{
-    background-color: white;
-    height: 500px;
-    width: 250px;
-}
-
-.SeriesTodo{
-    margin-left: 40px;
-    height: 400px;
-    width: 100%;
-}
-.series{
-    width: auto;
-    padding: 10px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    background-color: gainsboro;
-}
-
-#Buscarserie{
-    background-color: white;
-    box-sizing: border-box;
-    width: 100%;
-    height: 8%;
-    padding: 0;
-    margin-bottom: 15px;
-    padding-left: 10px;
-    border-radius: 4px 4px 4px 4px;
-}
-
-#tabla{
-    width: 100%;
-    height: 350px;
-    background-color: white;
-
-}
-
-.columna td{
-    padding: 5px;
-}
-.columna th{
-    padding-left: 10px;
-    border: 1px solid gainsboro;
-    border-radius: 2px 2px 2px 2px;
-    
-}
-
-
-/* Estilo para cada elemento de la lista */
-.item1 {
-    padding: 5px;
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    font-weight: bold;
-    width: 100px;
-    text-align: left;
-    
-}
-.item2 {
-    padding: 10px;
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    font-weight: bold;
-    width: 260px;
-    text-align: left;
-}
-.item3 {
-    padding: 10px;
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    font-weight: bold;
-    width: 400px;
-    text-align: left;
-}
-.item4 {
-    padding: 10px;
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    font-weight: bold;
-    width: 170px;
-    text-align: left;
-}
-.item5 {
-    padding: 10px;
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    font-weight: bold;
-    width: 130px;
-    text-align: left;
-}
-.item6 {
-    padding: 15px;
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    font-weight: bold;
-    width: 130px;
-    text-align: left;
-}
-
-.button-container {
-    display: flex; /* Utiliza el modelo de caja flexible para alinear los botones horizontalmente */
-    justify-content:end; /* Centra los botones horizontalmente en el contenedor */
-    padding: 20px; /* Espacio alrededor del contenedor */
-}
-
-
-.btn {
-    padding: 7px 12px; /* Espacio interno de los botones */
-    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
-    font-size: 13px; /* Tamaño de fuente de los botones */
-    transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */
-    color: rgb(121, 106, 255);
-    border: none; /* Elimina el borde del botón */
-    background-color: transparent; /* Elimina el color de fondo del botón */
-}
-.btn0 {
-    padding: 7px 12px; /* Espacio interno de los botones */
-    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
-    font-size: 13px; /* Tamaño de fuente de los botones */
-    transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */
-    color: grey;
-    border: none; /* Elimina el borde del botón */
-    background-color: transparent; /* Elimina el color de fondo del botón */
-
-}
-
-.btn:hover, .btn0:hover {
-    background-color:rgb(161, 255, 255); /* Color de fondo al pasar el cursor por encima */
-}
-
-
-.pie{
-    background-color: rgb(188, 188, 188);
-    width: auto;
-    height: 160px;
-    margin: 0;
-    display: flex;
-}
-
-
-
-.footer1{
-    padding-left: 35px;
-    width: 30%;
-    margin: auto;
-    padding-bottom: 20px;
-    
-    
-}
-.footer2{
-    width: 15%;
-    margin: auto;
-}
-.footer3{
-    width: 15%;
-    margin: auto;
-}
-.footer4{
-    width: 15%;
-    margin: auto;
-}
-.footer5{
-    width: 25%;
-    margin: auto;   
-}
-.logos{
-    width: 75%;
-    margin: auto;   
-    padding-left: 12%;
-    padding-bottom: 5%;
-}
-
-.til{
-    padding-left: 30px;
-    padding-top: 20px;
-    margin: 0;
-    padding-bottom: 10px;
-}
-.we{
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 0;
-}
-
-.wo{
-    margin-top: 0;
-    padding-bottom: 15px;
-}
-
-.tienda{
-    font-size: 25px;
-    margin-bottom: 0;
-}
+/* body{ */
+/*     background-color: rgb(234, 234, 234); */
+/*     font-size: 13px; */
+/**/
+/* } */
+/**/
+/* /* h2{ */ */
+/* /*     font-size: 20px; */ */
+/* /*     width: auto; */ */
+/* /*     background-color: white; */ */
+/* /*     padding-top: 15px; */ */
+/* /*     padding-bottom: 15px; */ */
+/* /* } */ */
+/* .admi{ */
+/*     padding-left: 30px; */
+/* } */
+/**/
+/* #medio1{ */
+/*         display: flex; */
+/*         background-color: rgb(234, 234, 234); */
+/*         margin-top: 20px; */
+/*         margin-left: 50px; */
+/*         margin-right: 50px; */
+/*         margin-bottom: 20px; */
+/* } */
+/**/
+/* .Admin{ */
+/*     background-color: white; */
+/*     height: 500px; */
+/*     width: 250px; */
+/* } */
+/**/
+/* .SeriesTodo{ */
+/*     margin-left: 40px; */
+/*     height: 400px; */
+/*     width: 100%; */
+/* } */
+/* .series{ */
+/*     width: auto; */
+/*     padding: 10px; */
+/*     margin-top: 0; */
+/*     margin-bottom: 15px; */
+/*     background-color: gainsboro; */
+/* } */
+/**/
+/* #Buscarserie{ */
+/*     background-color: white; */
+/*     box-sizing: border-box; */
+/*     width: 100%; */
+/*     height: 8%; */
+/*     padding: 0; */
+/*     margin-bottom: 15px; */
+/*     padding-left: 10px; */
+/*     border-radius: 4px 4px 4px 4px; */
+/* } */
+/**/
+/* #tabla{ */
+/*     width: 100%; */
+/*     height: 350px; */
+/*     background-color: white; */
+/**/
+/* } */
+/**/
+/* .columna td{ */
+/*     padding: 5px; */
+/* } */
+/* .columna th{ */
+/*     padding-left: 10px; */
+/*     border: 1px solid gainsboro; */
+/*     border-radius: 2px 2px 2px 2px; */
+/*      */
+/* } */
+/**/
+/**/
+/* /* Estilo para cada elemento de la lista */ */
+/* .item1 { */
+/*     padding: 5px; */
+/*     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ */
+/*     font-weight: bold; */
+/*     width: 100px; */
+/*     text-align: left; */
+/*      */
+/* } */
+/* .item2 { */
+/*     padding: 10px; */
+/*     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ */
+/*     font-weight: bold; */
+/*     width: 260px; */
+/*     text-align: left; */
+/* } */
+/* .item3 { */
+/*     padding: 10px; */
+/*     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ */
+/*     font-weight: bold; */
+/*     width: 400px; */
+/*     text-align: left; */
+/* } */
+/* .item4 { */
+/*     padding: 10px; */
+/*     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ */
+/*     font-weight: bold; */
+/*     width: 170px; */
+/*     text-align: left; */
+/* } */
+/* .item5 { */
+/*     padding: 10px; */
+/*     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ */
+/*     font-weight: bold; */
+/*     width: 130px; */
+/*     text-align: left; */
+/* } */
+/* .item6 { */
+/*     padding: 15px; */
+/*     box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ */
+/*     font-weight: bold; */
+/*     width: 130px; */
+/*     text-align: left; */
+/* } */
+/**/
+/* .button-container { */
+/*     display: flex; /* Utiliza el modelo de caja flexible para alinear los botones horizontalmente */ */
+/*     justify-content:end; /* Centra los botones horizontalmente en el contenedor */ */
+/*     padding: 20px; /* Espacio alrededor del contenedor */ */
+/* } */
+/**/
+/**/
+/* .btn { */
+/*     padding: 7px 12px; /* Espacio interno de los botones */ */
+/*     cursor: pointer; /* Cambia el cursor al pasar sobre los botones */ */
+/*     font-size: 13px; /* Tamaño de fuente de los botones */ */
+/*     transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */ */
+/*     color: rgb(121, 106, 255); */
+/*     border: none; /* Elimina el borde del botón */ */
+/*     background-color: transparent; /* Elimina el color de fondo del botón */ */
+/* } */
+/* .btn0 { */
+/*     padding: 7px 12px; /* Espacio interno de los botones */ */
+/*     cursor: pointer; /* Cambia el cursor al pasar sobre los botones */ */
+/*     font-size: 13px; /* Tamaño de fuente de los botones */ */
+/*     transition: background-color 0.3s ease; /* Animación suave para el cambio de color de fondo */ */
+/*     color: grey; */
+/*     border: none; /* Elimina el borde del botón */ */
+/*     background-color: transparent; /* Elimina el color de fondo del botón */ */
+/**/
+/* } */
+/**/
+/* .btn:hover, .btn0:hover { */
+/*     background-color:rgb(161, 255, 255); /* Color de fondo al pasar el cursor por encima */ */
+/* } */
+/**/
+/**/
+/* .pie{ */
+/*     background-color: rgb(188, 188, 188); */
+/*     width: auto; */
+/*     height: 160px; */
+/*     margin: 0; */
+/*     display: flex; */
+/* } */
+/**/
+/**/
+/**/
+/* .footer1{ */
+/*     padding-left: 35px; */
+/*     width: 30%; */
+/*     margin: auto; */
+/*     padding-bottom: 20px; */
+/*      */
+/*      */
+/* } */
+/* .footer2{ */
+/*     width: 15%; */
+/*     margin: auto; */
+/* } */
+/* .footer3{ */
+/*     width: 15%; */
+/*     margin: auto; */
+/* } */
+/* .footer4{ */
+/*     width: 15%; */
+/*     margin: auto; */
+/* } */
+/* .footer5{ */
+/*     width: 25%; */
+/*     margin: auto;    */
+/* } */
+/* .logos{ */
+/*     width: 75%; */
+/*     margin: auto;    */
+/*     padding-left: 12%; */
+/*     padding-bottom: 5%; */
+/* } */
+/**/
+/* .til{ */
+/*     padding-left: 30px; */
+/*     padding-top: 20px; */
+/*     margin: 0; */
+/*     padding-bottom: 10px; */
+/* } */
+/* .we{ */
+/*     margin: 0; */
+/*     padding-top: 5px; */
+/*     padding-bottom: 0; */
+/* } */
+/**/
+/* .wo{ */
+/*     margin-top: 0; */
+/*     padding-bottom: 15px; */
+/* } */
+/**/
+/* .tienda{ */
+/*     font-size: 25px; */
+/*     margin-bottom: 0; */
+/* } */

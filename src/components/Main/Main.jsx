@@ -1,4 +1,4 @@
-import "./Main.css";
+// import "./Main.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -21,8 +21,7 @@ const Main = () => {
     <>
       <section className="flex flex-col gap-4">
         <h2>Colecciones Destacadas</h2>
-        <div className="lineaSep" />
-        <div className="flex flex-wrap gap-16 justify-center">
+        <div className="flex flex-wrap gap-16">
           {series.length === 0 && "No hay series"}
           {series.map((serie) => (
             <Link
@@ -37,11 +36,11 @@ const Main = () => {
       </section>
       <section className="flex flex-col gap-4" id="mas-vendidos">
         <h2 id="#mas-vendidos">Más Vendidos del Mes</h2>
-        <div className="lineaSep" />
-        <div className="grid grid-cols-4 justify-center">
+        <div className="flex flex-wrap">
           {productos.length === 0 && "No hay productos"}
           {productos.slice(0, 4).map((producto) => (
             <Link to={`/product/${producto.id}`} key={producto.id}>
+              <img src={producto.img} width={200} className="aspect-square" />
               <div className="relative w-56">
                 <p>{producto.nombre}</p>
                 <p>Marca: {producto.marca}</p>

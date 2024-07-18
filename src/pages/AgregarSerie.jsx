@@ -18,8 +18,6 @@ const AgregarSerie = () => {
                         <br/>
                         <li>Órdenes</li>
                         <br/>
-                        <li>Productos más vendidos</li>
-                        <br/>
                         <li>Series</li>
                     </ul>
                 </article>

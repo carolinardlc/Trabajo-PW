@@ -39,6 +39,12 @@ export function AgregarProductoPage() {
         <form className="flex flex-col gap-2" onSubmit={onSubmit}>
           <input
             type="text"
+            placeholder="Enlace a la imagen"
+            {...form.register("img")}
+          />
+          <Error>{form.formState.errors.img}</Error>
+          <input
+            type="text"
             placeholder="Nombre"
             {...form.register("nombre")}
           />

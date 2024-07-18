@@ -1,24 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UserList.css'; 
 
-const UserList = () => {
-  const initialUsers = [
-    { id: 1, nombre: 'Juan', apellido: 'Perez', correo: 'juan@example.com', fechaRegistro: '2023-01-01', estado: 'Activo' },
-    { id: 2, nombre: 'Ana', apellido: 'Gomez', correo: 'ana@example.com', fechaRegistro: '2023-02-01', estado: 'Inactivo' },
-    { id: 3, nombre: 'Luis', apellido: 'Martinez', correo: 'luis@example.com', fechaRegistro: '2023-03-01', estado: 'Activo' },
-    { id: 4, nombre: 'Carla', apellido: 'Lopez', correo: 'carla@example.com', fechaRegistro: '2023-04-01', estado: 'Activo' },
-  ];
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
-  const [users, setUsers] = useState(initialUsers);
+const UserList = () => {
+  const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const usersPerPage = 2;
 
   const filteredUsers = users.filter(user =>
-    user.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.apellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.correo.toLowerCase().includes(searchTerm.toLowerCase())
+    user.usuario.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.id.includes(searchTerm.toLowerCase())
   );
 
   const indexOfLastUser = currentPage * usersPerPage;
@@ -27,11 +21,11 @@ const UserList = () => {
 
   const totalPages = Math.ceil(filteredUsers.length / usersPerPage);
 
-  const cambio0 = (id) => {
-    setUsers(users.map(user => 
-      user.id === id ? { ...user, estado: user.estado === 'Activo' ? 'Inactivo' : 'Activo' } : user
-    ));
-  };
+  useEffect(() => {
+    fetch(`${SERVER_URL}/usuarios`)
+      .then((res) => res.json())
+      .then((data) => setUsers(data));
+  }, [])
 
   return (
     <div className="container">
@@ -54,30 +48,16 @@ const UserList = () => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Correo</th>
-              <th>Fecha de Registro</th>
-              <th>Estado</th>
-              <th>Acciones</th>
+              <th>Usuario</th>
+              <th>Rol</th>
             </tr>
           </thead>
           <tbody>
             {currentUsers.map(user => (
               <tr key={user.id}>
                 <td>{user.id}</td>
-                <td>{user.nombre}</td>
-                <td>{user.apellido}</td>
-                <td>{user.correo}</td>
-                <td>{user.fechaRegistro}</td>
-                <td>{user.estado}</td>
-                <td className="actions">
-                  <Link to={`/admin/users/${user.id}`}>Ver</Link>
-                  {' | '}
-                  <button onClick={() => cambio0(user.id)}>
-                    {user.estado === 'Activo' ? 'Desactivar' : 'Activar'}
-                  </button>
-                </td>
+                <td>{user.usuario}</td>
+                <td>{user.rol}</td>
               </tr>
             ))}
           </tbody>
