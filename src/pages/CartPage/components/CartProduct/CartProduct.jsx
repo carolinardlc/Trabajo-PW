@@ -1,59 +1,38 @@
 import { useState } from "react";
+import { useCart } from "../../../../contexts/useCart";
 
-const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+export function CartProduct({ producto }) {
+  const { updateProduct, removeFromCart } = useCart();
 
-const removeFromCart = ({ carrito_id, producto_id }) => {
-  fetch(`${SERVER_URL}/carritos/${carrito_id}/items/${producto_id}`, {
-    method: "DELETE",
-  });
-};
-
-const updateProductItem = ({ producto_id, estado, cantidad }) => {
-  fetch(`${SERVER_URL}/carritos/items/${producto_id}`, {
-    method: "PUT",
-    body: JSON.stringify({ estado, cantidad }),
-    mode: "cors",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  });
-};
-
-export function CartProduct({ product }) {
   const [previewProductQuantity, setPreviewProductQuantity] = useState(
-    product.cantidad,
+    producto.cantidad,
   );
 
-  const remove = async () => {
-    removeFromCart(product);
-  };
-
   const move = async () => {
-    if (product.estado === "in-cart") {
-      updateProductItem({ ...product, estado: "saved" });
+    if (producto.estado === "in-cart") {
+      updateProduct({ producto, estado: "saved" });
     }
 
-    if (product.estado === "saved") {
-      updateProductItem({ ...product, estado: "in-cart" });
+    if (producto.estado === "saved") {
+      updateProduct({ producto, estado: "in-cart" });
     }
   };
 
   const changeProductQuantity = (newQuantity) => {
-    updateProductItem({ ...product, cantidad: newQuantity });
+    updateProduct({ producto, cantidad: newQuantity });
   };
 
   return (
     <div className="flex gap-4 bg-white p-4">
-      <img src={product.img} className="aspect-square w-[250px]" />
+      <img src={producto.img} className="aspect-square w-[250px]" />
       <div className="flex-1">
-        <h3>{product.nombre}</h3>
+        <h3>{producto.nombre}</h3>
         <div className="flex gap-4">
-          <button onClick={() => remove(product)}>Eliminar</button>
+          <button onClick={() => removeFromCart({ producto })}>Eliminar</button>
           <span>|</span>
-          <button onClick={() => move(product)}>
-            {product.estado === "in-cart" && "Guardar para después"}
-            {product.estado === "saved" && "Mover al carrito"}
+          <button onClick={() => move(producto)}>
+            {producto.estado === "in-cart" && "Guardar para después"}
+            {producto.estado === "saved" && "Mover al carrito"}
           </button>
         </div>
       </div>
@@ -75,11 +54,11 @@ export function CartProduct({ product }) {
       />
       <div className="flex flex-col">
         <h3>Precio</h3>
-        <p>S/ {product.precio}</p>
+        <p>S/ {producto.precio}</p>
       </div>
       <div className="flex flex-col">
         <h3>Subtotal</h3>
-        <p>S/ {product.precio * product.cantidad}</p>
+        <p>S/ {producto.precio * producto.cantidad}</p>
       </div>
     </div>
   );

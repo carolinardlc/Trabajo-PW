@@ -18,7 +18,7 @@ const Register = () => {
       return;
     }
 
-    const usr = { usuario, password, rol: "admin" };
+    const usr = { usuario, password };
 
     const err = await register(usr);
     await login(usr);

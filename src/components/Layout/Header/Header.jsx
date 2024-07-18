@@ -1,8 +1,9 @@
-import "./Header.css";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useUser } from "../../../contexts/useUser";
 
 const Header = () => {
+  const { user } = useUser();
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
@@ -15,22 +16,22 @@ const Header = () => {
 
   return (
     <>
-      <div className="top-bar">
-        <section className="izquierda">
-          <Link style={{ textDecoration: "none", color: "black" }} to="/">
-            <h1 className="text-8xl">A-Shus</h1>
+      <div className="flex justify-between p-4">
+        <section style={{ alignItems: "center" }} className="flex gap-4">
+          <Link style={{ textDecoration: "none", color: "black", display: "flex" }} to="/">
+            <img style={{borderRadius: 999}} className="rounded-full" width={50} height={50} src="https://static.vecteezy.com/system/resources/thumbnails/004/680/305/small/shoes-glyph-icon-free-vector.jpg" />
           </Link>
-          <a className="left" href="#mas-vendidos">
+          <Link className="left" to="/#mas-vendidos">
             Más Vendidos
-          </a>
-          <a className="left" href="#nuevos">
-            Nuevos
-          </a>
-        </section>
-        <div className="separacion">
-          <Link className="right" to="/dashboard">
-            Dashboard
           </Link>
+          <Link className="left" to="/#nuevos">
+            Nuevos
+          </Link>
+        </section>
+        <div style={{ alignItems: "center" }} className="flex gap-4">
+          {user && user.rol === "admin" && <Link className="right" to="/dashboard">
+            Dashboard
+          </Link>}
           <Link className="right" to="/cart">
             Cart
           </Link>

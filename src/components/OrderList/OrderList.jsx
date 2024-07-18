@@ -11,9 +11,8 @@ const OrderList = () => {
   const ordersPerPage = 2;
 
   const filteredOrders = orders.filter(order =>
-    order.usuarioNombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    order.usuarioApellido.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    order.correo.toLowerCase().includes(searchTerm.toLowerCase())
+    searchTerm.toLowerCase().includes(order.usuario_id) ||
+    searchTerm.toLowerCase().includes(order.id)
   );
 
   const indexOfLastOrder = currentPage * ordersPerPage;
@@ -49,11 +48,11 @@ const OrderList = () => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Nombre</th>
-              <th>Fecha</th>
+              <th>Usuario</th>
+              <th>Tipo de Envío</th>
               <th>Total</th>
-              <th>Correo</th>
-              <th>Estado</th>
+              <th>Subtotal</th>
+              <th>Impuestos</th>
               <th>Acciones</th>
             </tr>
           </thead>
@@ -61,11 +60,11 @@ const OrderList = () => {
             {currentOrders.map(order => (
               <tr key={order.id}>
                 <td>{order.id}</td>
-                <td>{order.usuarioNombre} {order.usuarioApellido}</td>
-                <td>{order.fecha}</td>
-                <td>S/{order.total}</td>
-                <td>{order.correo}</td>
-                <td>{order.estado}</td>
+                <td>{order.usuario_id}</td>
+                <td>{order.tipo_envio}</td>
+                <td>{order.total}</td>
+                <td>S/{order.subtotal}</td>
+                <td>{order.impuestos}</td>
                 <td className="actions">
                   <Link to={`/admin/orders/${order.id}`}>Ver</Link>
                 </td>

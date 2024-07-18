@@ -35,11 +35,11 @@ import { ProtectedRoute } from "./components/ProtectedRoute.jsx";
 const router = createBrowserRouter([
   {
     element: (
-      <Layout>
-        <Providers>
+      <Providers>
+        <Layout>
           <Outlet />
-        </Providers>
-      </Layout>
+        </Layout>
+      </Providers>
     ),
     errorElement: (
       <Layout>
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
         element: <SearchResultsPage />,
       },
       {
-        path: "/product/:id",
+        path: "/products/:id",
         element: <ProductDetailsPage />,
       },
       {
@@ -106,8 +106,12 @@ const router = createBrowserRouter([
         element: <SearchPage />,
       },
       {
-        path: "/lista-serie",
-        element: <ListaSerie />,
+        path: "/dashboard/series",
+        element: (
+          <ProtectedRoute allowedRoles={["admin"]}>
+            <ListaSerie />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/agregar-serie",

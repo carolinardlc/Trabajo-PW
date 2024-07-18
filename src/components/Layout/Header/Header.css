@@ -1,103 +1,103 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.left {
-    font-size: 15px;
-    color: #222222;
-    text-decoration: none;
-    margin-left: 20px;
-    margin-top: 3px;
-}
-
-.right {
-    font-size: 15px;
-    color: #222222;
-    text-decoration: none;
-    margin-top: 3px;
-    margin-right: 20px;
-}
-
-header {
-    background-color: #333;
-    color: rgb(0, 0, 0);
-    padding: 0px;
-    height: 77px;
-
-}
-
-.top-bar {
-    background-color: #fafafa;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-}
-
-.izquierda {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-.separacion {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-.MiCuentaButton {
-    font-size: 12px;
-    width: 100px;
-    height: 25px;
-    border: none;
-    border-radius: 5px;
-    background-color: #000000;
-    color: white;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.top-bar h1 {
-    margin: 0px;
-    font-size: 20px;
-}
-
-.search-bar {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    padding: 5px;
-    background-color: #e2dfdf;
-    width: 100%;
-}
-
-.search-bar input {
-    width: 90%;
-    height: 10px;
-    padding: 10px;
-    border-style: solid;
-    border-color: #4e4e4e;
-    border-width: 1px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.search-bar button {
-    padding: 10px 20px;
-    height: 32px;
-    border: none;
-    border-radius: 5px;
-    background-color: #7e7b7b;
-    color: white;
-    cursor: pointer;
-}
-
-
-
-
+/* body { */
+/*     font-family: Arial, sans-serif; */
+/*     margin: 0; */
+/*     padding: 0; */
+/*     box-sizing: border-box; */
+/* } */
+/**/
+/* .left { */
+/*     font-size: 15px; */
+/*     color: #222222; */
+/*     text-decoration: none; */
+/*     margin-left: 20px; */
+/*     margin-top: 3px; */
+/* } */
+/**/
+/* .right { */
+/*     font-size: 15px; */
+/*     color: #222222; */
+/*     text-decoration: none; */
+/*     margin-top: 3px; */
+/*     margin-right: 20px; */
+/* } */
+/**/
+/* header { */
+/*     background-color: #333; */
+/*     color: rgb(0, 0, 0); */
+/*     padding: 0px; */
+/*     height: 77px; */
+/**/
+/* } */
+/**/
+/* .top-bar { */
+/*     background-color: #fafafa; */
+/*     display: flex; */
+/*     flex-wrap: nowrap; */
+/*     align-items: center; */
+/*     justify-content: space-between; */
+/*     padding-top: 5px; */
+/*     padding-bottom: 5px; */
+/*     padding-left: 20px; */
+/* } */
+/**/
+/* .izquierda { */
+/*     display: flex; */
+/*     flex-wrap: nowrap; */
+/* } */
+/**/
+/* .separacion { */
+/*     display: flex; */
+/*     flex-wrap: nowrap; */
+/*     justify-content: space-between; */
+/* } */
+/**/
+/* .MiCuentaButton { */
+/*     font-size: 12px; */
+/*     width: 100px; */
+/*     height: 25px; */
+/*     border: none; */
+/*     border-radius: 5px; */
+/*     background-color: #000000; */
+/*     color: white; */
+/*     cursor: pointer; */
+/*     margin-right: 10px; */
+/* } */
+/**/
+/* .top-bar h1 { */
+/*     margin: 0px; */
+/*     font-size: 20px; */
+/* } */
+/**/
+/* .search-bar { */
+/*     display: flex; */
+/*     flex-wrap: nowrap; */
+/*     justify-content: center; */
+/*     padding: 5px; */
+/*     background-color: #e2dfdf; */
+/*     width: 100%; */
+/* } */
+/**/
+/* .search-bar input { */
+/*     width: 90%; */
+/*     height: 10px; */
+/*     padding: 10px; */
+/*     border-style: solid; */
+/*     border-color: #4e4e4e; */
+/*     border-width: 1px; */
+/*     border-radius: 5px; */
+/*     margin-right: 10px; */
+/* } */
+/**/
+/* .search-bar button { */
+/*     padding: 10px 20px; */
+/*     height: 32px; */
+/*     border: none; */
+/*     border-radius: 5px; */
+/*     background-color: #7e7b7b; */
+/*     color: white; */
+/*     cursor: pointer; */
+/* } */
+/**/
+/**/
+/**/
+/**/

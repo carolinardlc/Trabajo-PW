@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import "./checkout-page.css";
 import { useUser } from "../../contexts/useUser";
+import { useCart } from "../../contexts/useCart";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
@@ -31,13 +32,6 @@ const createOrder = ({
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-  });
-};
-
-const removeFromCart = ({ carrito_id, producto_id }) => {
-  fetch(`${SERVER_URL}/carritos/${carrito_id}/items/${producto_id}`, {
-    method: "DELETE",
-    mode: "cors",
   });
 };
 
@@ -69,15 +63,12 @@ const METODOS_DE_ENVIO = {
 
 export function CheckoutPage() {
   const { user } = useUser();
+  const { cart, removeFromCart } = useCart();
   const [paymentMethod, setPaymentMethod] = useState("card"); // "card" or "qr"
-  const [cart, setCart] = useState(undefined);
   const [direccion, setDireccion] = useState(undefined);
 
   useEffect(() => {
     if (user) {
-      fetch(`${SERVER_URL}/carritos/${user.carrito_id}`)
-        .then((res) => res.json())
-        .then((data) => setCart(data));
       fetch(`${SERVER_URL}/direcciones/${user.direccion_id}`)
         .then((res) => res.json())
         .then((data) => setDireccion(data));
@@ -125,8 +116,8 @@ export function CheckoutPage() {
       return;
     }
 
-    for (const product of cartProducts) {
-      removeFromCart(product);
+    for (const producto of cartProducts) {
+      removeFromCart({ producto });
     }
 
     createOrder({

@@ -3,24 +3,12 @@ import { Separator } from "../../components/Separator";
 
 import "./cart-page.css";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useUser } from "../../contexts/useUser";
-
-const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+import { useCart } from "../../contexts/useCart";
 
 export function CartPage() {
-  const { user } = useUser();
-  const [cart, setCart] = useState(undefined);
+  const { cart } = useCart();
 
-  useEffect(() => {
-    if (user) {
-      fetch(`${SERVER_URL}/carritos/${user.carrito_id}`)
-        .then((res) => res.json())
-        .then((data) => setCart(data));
-    }
-  }, [user]);
-
-  if (!cart) {
+  if (cart === undefined) {
     return null;
   }
 
@@ -39,7 +27,7 @@ export function CartPage() {
           <h2>Items disponibles para Envío</h2>
         </Separator>
         {cartProducts.map((product) => (
-          <CartProduct key={product.id} product={product} />
+          <CartProduct key={product.id} producto={product} />
         ))}
         <div className="checkout-container">
           <h4>Subtotal: S/ {subtotalPrice}</h4>
@@ -53,7 +41,7 @@ export function CartPage() {
           <h2>Guardado para después</h2>
         </Separator>
         {savedProducts.map((product) => (
-          <CartProduct key={product.id} product={product} />
+          <CartProduct key={product.id} producto={product} />
         ))}
       </div>
     </div>

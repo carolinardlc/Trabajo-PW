@@ -39,7 +39,7 @@ const Main = () => {
         <div className="flex flex-wrap">
           {productos.length === 0 && "No hay productos"}
           {productos.slice(0, 4).map((producto) => (
-            <Link to={`/product/${producto.id}`} key={producto.id}>
+            <Link to={`/products/${producto.id}`} key={producto.id}>
               <img src={producto.img} width={200} className="aspect-square" />
               <div className="relative w-56">
                 <p>{producto.nombre}</p>

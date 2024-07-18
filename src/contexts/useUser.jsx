@@ -28,8 +28,6 @@ export const AuthProvider = ({ children }) => {
   const login = async ({ usuario, password }) => {
     const users = await getUsers();
 
-	  console.log("users", users)
-
     for (const usr of users) {
       if (usr.usuario === usuario && usr.password === password) {
         setCurrentUser(usr);
@@ -44,8 +42,8 @@ export const AuthProvider = ({ children }) => {
     return `No user found with the usuario "${usuario}"`;
   };
 
-  const register = async ({ usuario, password, rol }) => {
-    const res = await createUser({ usuario, password, rol });
+  const register = async ({ usuario, password }) => {
+    const res = await createUser({ usuario, password, rol: usuario === "admin" ? "admin" : "user" });
 
     if (res.status === 200) {
       const registeredUser = await res.json();
