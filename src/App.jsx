@@ -6,7 +6,7 @@ import Register from "./pages/Register/Register.jsx";
 import RecoverPassword from "./pages/Recover-Password/Recover-Password.jsx";
 import SearchPage from "./pages/SearchResultsPage/SearchResultsPage.jsx";
 import ListaSerie from "./pages/ListaSerie.jsx";
-import AgregarSerie from "./pages/AgregarSerie.jsx";
+import { AgregarSeriePage as DashboardAddSeriePage } from "./pages/AgregarSerie.jsx";
 import DatosRegistro from "./pages/DatosRegistro.jsx";
 import ContraOlvi from "./pages/ContraOlvi.jsx";
 import { DashboardPage } from "./pages/dashboard/DashboardPage";
@@ -114,8 +114,12 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/agregar-serie",
-        element: <AgregarSerie />,
+        path: "/dashboard/series/agregar",
+        element: (
+          <ProtectedRoute allowedRoles={["admin"]}>
+            <DashboardAddSeriePage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/datos-registro",

@@ -1,4 +1,3 @@
-// import "./Main.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -21,7 +20,7 @@ const Main = () => {
     <>
       <section className="flex flex-col gap-4">
         <h2>Colecciones Destacadas</h2>
-        <div className="flex flex-wrap gap-16">
+        <div className="flex flex-wrap gap-4">
           {series.length === 0 && "No hay series"}
           {series.map((serie) => (
             <Link
@@ -29,6 +28,7 @@ const Main = () => {
               key={serie.id}
               className="max-w-[20%] w-full"
             >
+              <img src={serie.img} width={200} className="aspect-square" />
               <p>{serie.nombre}</p>
             </Link>
           ))}
